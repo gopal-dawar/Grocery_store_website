@@ -289,7 +289,7 @@ h3 {
 }
 
 .sectionheading .container {
-    background-image: url('/images/sections.avif');
+    background-image: url('./images/sections.avif');
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
