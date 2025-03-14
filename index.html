@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grocery Store</title>
+
+        <!-- Bootstrap css link -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+
+        <!-- Bootstrap icon -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+            rel="stylesheet">
+
+        <!-- font awesome link -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Css file -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+
+        <!-- Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora&display=swap"
+            rel="stylesheet">
+
+        <!-- jQuery link -->
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+        <!-- Scroll animation cdn link -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Preloader -->
+        <div class="preloader" id="preloader">
+            <div class="loader">
+                <div class="spinner"></div>
+                <i class="fa-brands fa-pagelines"></i>
+            </div>
+        </div>
+
+        <!-- Header Section -->
+        <header class="header">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="/index.html">Grocery Store</a>
+                    <div class="navbar-collapse" id="navbarContent">
+                        <div class="d-flex mx-auto firstsearch w-50">
+                            <input id="searchInput" class="form-control"
+                                type="search" placeholder="Search here..."
+                                aria-label="Search">
+                            <button class="btn btn-outline-success"><i
+                                    class="fas fa-search"></i></button>
+                        </div>
+                        <ul class="navbar-nav topnav mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact"><i
+                                        class="fas fa-phone"></i>
+                                    <span>Contact</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="formopen"><i
+                                        class="fas fa-user"></i></a>
+                            </li>
+                            <li class="nav-item">
+
+                                <!-- Shopping Cart Icon -->
+                                <a class="nav-link" id="shoppingCartIcon">
+                                    <i class="fas fa-shopping-cart"><span
+                                            class="count"
+                                            data-default="0">0</span></i>
+                                </a>
+
+                            </li>
+                            <li class="nav-item menubtn">
+                                <a class="nav-link"><i
+                                        class="fa-solid fa-bars menu"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <nav class="navbar navbar-expand-lg nav2">
+                    <div class="navbar-collapse"
+                        id="secondaryNavContent">
+
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active1" href="#main">
+                                    <i class="fa-solid fa-house"></i>
+                                    Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#topsell"><i
+                                        class="fa-solid fa-shop shopmargin"></i>Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#deals"><i
+                                        class="fas fa-tag"></i> Deal Today</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#hotoffers"><i
+                                        class="fas fa-fire"></i> Hot Offers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/src/products.html"><i
+                                        class="fas fa-utensils"></i> Fresh
+                                    Deals</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/src/about.html"><i
+                                        class="fa-solid fa-address-card"></i>About
+                                    Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i
+                                        class="fas fa-heart"></i> Wishlist</a>
+                            </li>
+                        </ul>
+                        <div class="help-center ms-auto">
+                            <a href="#" class="nav-link"><i
+                                    class="fas fa-question-circle"></i> Help
+                                Center</a>
+                        </div>
+                        <div class="d-flex mx-auto secondsearch">
+                            <input class="form-control" type="search"
+                                placeholder="Search here..."
+                                aria-label="Search">
+                            <button class="btn btn-outline-success"
+                                type="submit"><i
+                                    class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- search option list -->
+        <ul id="searchResults" class="list-group mt-3 w-50 mx-auto">
+            <li class="list-group-item"><a href="#">Apple</a></li>
+            <li class="list-group-item"><a href="#">Orange</a></li>
+            <li class="list-group-item"><a href="#">Banana</a></li>
+            <li class="list-group-item"><a href="#">Mango</a></li>
+            <li class="list-group-item"><a href="#">Strawberry</a></li>
+        </ul>
+
+        <section class="main productactive" id="main">
+
+            <!-- Home section  -->
+            <div class="home">
+                <div class="container">
+                    <div class="left-section">
+                        <h1 data-aos="fade-right" data-aos-delay="100">
+                            <span>Fresh</span> Groceries
+                        </h1>
+                        <h5 data-aos="fade-right" data-aos-delay="200">Freshness
+                            you can trust.</h5>
+                        <p data-aos="fade-right" data-aos-delay="300">Shop from
+                            a wide range of fresh
+                            fruits, vegetables,
+                            and daily essentials. We ensure the best quality at
+                            affordable prices</p>
+                        <a data-aos="fade-right" data-aos-delay="400"
+                            class="btn">Shop Now</a>
+                    </div>
+                    <div class="right-section" data-aos="fade-left"
+                        data-aos-delay="200">
+                        <img src="/images/bg1.png" alt="Fresh Groceries">
+                    </div>
+                </div>
+            </div>
+
+            <section class="product-container">
+                <div class="container">
+
+                    <!-- Top Selling product -->
+                    <section class="products productactive" id="topsell">
+                        <div class="heading">
+                            <h1 data-aos="fade-right"><span>Top</span>
+                                Selling</h1>
+                            <a href="/src/products.html" class="viewbtn"
+                                data-aos="fade-left">View
+                                All</a>
+                        </div>
+                        <div class="products-grid">
+                            <!-- product 1 -->
+                            <div class="product-card" data-aos="fade-up"
+                                data-aos-delay="100" data-id="1"
+                                data-name="Apple"
+                                data-price="110"
+                                data-image="/images/top selling/apple2.avif">
+                                <div class="product-box">
+                                    <div class="imgs">
+                                        <img
+                                            src="/images/top selling/apple1.avif"
+                                            class="img1" alt="Product Image">
+                                        <img src="/images/top selling/apple.png"
+                                            class="img2" alt="Product Image">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">Apple</h4>
+                                        <div class="prices">
+                                            <span class="price"><i
+                                                    class="fa-solid fa-indian-rupee-sign"></i>110</span>
+                                            <span class="discount">2%</span>
+                                        </div>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i
+                                                class="fa-solid fa-star-half-stroke"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <div class="btns">
+                                            <button class="btn add-to-cart">Add
+                                                to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product 2 -->
+                            <div class="product-card" data-aos="fade-up"
+                                data-aos-delay="200" data-id="2"
+                                data-name="Bananas" data-price="50"
+                                data-image="/images/top selling/banana2.avif">
+                                <div class="product-box">
+                                    <div class="imgs">
+                                        <img
+                                            src="/images/top selling/banana1.avif"
+                                            class="img1" alt="Product Image">
+                                        <img
+                                            src="/images/top selling/banana.png"
+                                            class="img2" alt="Product Image">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">Bananas</h4>
+                                        <div class="prices">
+                                            <span class="price"><i
+                                                    class="fa-solid fa-indian-rupee-sign"></i>50</span>
+                                            <span class="discount">5%</span>
+                                        </div>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i
+                                                class="fa-solid fa-star-half-stroke"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <div class="btns">
+                                            <button class="btn add-to-cart">Add
+                                                to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product 3 -->
+                            <div class="product-card" data-aos="fade-up"
+                                data-aos-delay="300" data-id="3"
+                                data-name="Orange"
+                                data-price="65"
+                                data-image="/images/top selling/orange2.jpg">
+                                <div class="product-box">
+                                    <div class="imgs">
+                                        <img
+                                            src="/images/top selling/orange1.avif"
+                                            class="img1" alt="Product Image">
+                                        <img
+                                            src="/images/top selling/orange2.jpg"
+                                            class="img2" alt="Product Image">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">Orange</h4>
+                                        <div class="prices">
+                                            <span class="price"><i
+                                                    class="fa-solid fa-indian-rupee-sign"></i>65</span>
+                                            <span class="discount">10%</span>
+                                        </div>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i
+                                                class="fa-solid fa-star-half-stroke"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <div class="btns">
+                                            <button class="btn add-to-cart">Add
+                                                to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product 4 -->
+                            <div class="product-card" data-aos="fade-up"
+                                data-aos-delay="400" data-id="4"
+                                data-name="Grapes"
+                                data-price="70"
+                                data-image="/images/top selling/grapes2.avif">
+                                <div class="product-box">
+                                    <div class="imgs">
+                                        <img
+                                            src="/images/top selling/grapes1.avif"
+                                            class="img1" alt="Product Image">
+                                        <img
+                                            src="/images/top selling/grapes2.avif"
+                                            class="img2" alt="Product Image">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">Grapes</h4>
+                                        <div class="prices">
+                                            <span class="price"><i
+                                                    class="fa-solid fa-indian-rupee-sign"></i>70</span>
+                                            <span class="discount">4%</span>
+                                        </div>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i
+                                                class="fa-solid fa-star-half-stroke"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <div class="btns">
+                                            <button class="btn add-to-cart">Add
+                                                to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product 5 -->
+                            <div class="product-card" data-aos="fade-up"
+                                data-aos-delay="100" data-id="5"
+                                data-name="Chilis"
+                                data-price="50"
+                                data-image="/images/top selling/chili1.avif">
+                                <div class="product-box">
+                                    <div class="imgs">
+                                        <img
+                                            src="/images/top selling/red papper.png"
+                                            class="img1" alt="Product Image">
+                                        <img src="/images/top selling/chili.png"
+                                            class="img2" alt="Product Image">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">Chilis</h4>
+                                        <div class="prices">
+                                            <span class="price"><i
+                                                    class="fa-solid fa-indian-rupee-sign"></i>50</span>
+                                            <span class="discount">0%</span>
+                                        </div>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i
+                                                class="fa-solid fa-star-half-stroke"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <div class="btns">
+                                            <button class="btn add-to-cart">Add
+                                                to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product 6 -->
+                            <div class="product-card" data-aos="fade-up"
+                                data-aos-delay="200" data-id="6"
+                                data-name="Carrots" data-price="30"
+                                data-image="/images/top selling/carrots2.avif">
+                                <div class="product-box">
+                                    <div class="imgs">
+                                        <img
+                                            src="/images/top selling/carrots2.jpg"
+                                            class="img1" alt="Product Image">
+                                        <img
+                                            src="/images/top selling/carrot.png"
+                                            class="img2" alt="Product Image">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">carrots</h4>
+                                        <div class="prices">
+                                            <span class="price"><i
+                                                    class="fa-solid fa-indian-rupee-sign"></i>30</span>
+                                            <span class="discount">0%</span>
+                                        </div>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i
+                                                class="fa-solid fa-star-half-stroke"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <div class="btns">
+                                            <button class="btn add-to-cart">Add
+                                                to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product 7 -->
+                            <div class="product-card" data-aos="fade-up"
+                                data-aos-delay="300" data-id="7"
+                                data-name="Spinach" data-price="40"
+                                data-image="/images/top selling/spinach2.avif">
+                                <div class="product-box">
+                                    <div class="imgs">
+                                        <img
+                                            src="/images/top selling/spinach.jpg"
+                                            class="img1" alt="Product Image">
+                                        <img
+                                            src="/images/top selling/spinach2.avif"
+                                            class="img2" alt="Product Image">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">Spinach</h4>
+                                        <div class="prices">
+                                            <span class="price"><i
+                                                    class="fa-solid fa-indian-rupee-sign"></i>40</span>
+                                            <span class="discount">20%</span>
+                                        </div>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i
+                                                class="fa-solid fa-star-half-stroke"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <div class="btns">
+                                            <button class="btn add-to-cart">Add
+                                                to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product 8 -->
+                            <div class="product-card" data-aos="fade-up"
+                                data-aos-delay="400" data-id="8"
+                                data-name="Onions"
+                                data-price="70"
+                                data-image="/images/top selling/onion2.avif">
+                                <div class="product-box">
+                                    <div class="imgs">
+                                        <img
+                                            src="/images/top selling/onion1.jpg"
+                                            class="img1" alt="Product Image">
+                                        <img
+                                            src="/images/top selling/onion2.png"
+                                            class="img2" alt="Product Image">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">Onions</h4>
+                                        <div class="prices">
+                                            <span class="price"><i
+                                                    class="fa-solid fa-indian-rupee-sign"></i>70</span>
+                                            <span class="discount">20%</span>
+                                        </div>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i
+                                                class="fa-solid fa-star-half-stroke"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <div class="btns">
+                                            <button class="btn add-to-cart">Add
+                                                to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Repeat the Product Card Template with new content -->
+                        </div>
+                    </section>
+
+                    <!-- shopnow -->
+                    <div class="shopnow">
+                        <div class="container">
+                            <div class="imgs"></div>
+                            <div class="content" data-aos="zoom-in">
+                                <h6>All Products</h6>
+                                <p>
+                                    Free Shopping On Over <i
+                                        class="fa-solid fa-indian-rupee-sign"></i>20
+                                </p>
+                                <button class="btn">
+                                    <a href="/src/products.html"> See More
+                                        Products</a><i
+                                        class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Deal Today -->
+                    <section class="products productactive" id="deals">
+                        <div class="heading">
+                            <h1 data-aos="fade-right"><span>Deals</span>
+                                Today</h1>
+                            <a href="/src/products.html" class="viewbtn"
+                                data-aos="fade-left">View
+                                All</a>
+                        </div>
+                        <div class="products-grid">
+                            <!-- product 1 -->
+                            <div class="product-card" data-aos="fade-up"
+                                data-aos-delay="100" data-aos="fade-up"
+                                data-id="1"
+                                data-name="Product 1" data-price="440"
+                                data-image="/images/product/topsell (1).jpg">
+                                <div class="product-box">
+                                    <div class="imgs">
+                                        <img src="/images/dealstoday/chili1.jpg"
+                                            class="img1" alt="Product Image">
+                                        <img src="/images/dealstoday/chili2.jpg"
+                                            class="img2" alt="Product Image">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">Product 1</h4>
+                                        <div class="prices">
+                                            <span class="price"><i
+                                                    class="fa-solid fa-indian-rupee-sign"></i>440</span>
+                                            <span class="discount">20%</span>
+                                        </div>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i
+                                                class="fa-solid fa-star-half-stroke"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <div class="btns">
+                                            <button class="btn add-to-cart">Add
+                                                to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product 2 -->
+                            <div class="product-card" data-aos="fade-up"
+                                data-aos-delay="200" data-aos="fade-up"
+                                data-id="1"
+                                data-name="Product 1" data-price="440"
+                                data-image="/images/product/topsell (1).jpg">
+                                <div class="product-box">
+                                    <div class="imgs">
+                                        <img src="/images/dealstoday/Milk.avif"
+                                            class="img1" alt="Product Image">
+                                        <img src="/images/dealstoday/Milk2.avif"
+                                            class="img2" alt="Product Image">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">Product 1</h4>
+                                        <div class="prices">
+                                            <span class="price"><i
+                                                    class="fa-solid fa-indian-rupee-sign"></i>440</span>
+                                            <span class="discount">20%</span>
+                                        </div>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i
+                                                class="fa-solid fa-star-half-stroke"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <div class="btns">
+                                            <button
+                                                class="btn add-to-cart">Explore
+                                                now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product 3 -->
+                            <div class="product-card" data-aos="fade-up"
+                                data-aos-delay="300" data-aos="fade-up"
+                                data-id="1"
+                                data-name="Product 1" data-price="440"
+                                data-image="/images/product/topsell (1).jpg">
+                                <div class="product-box">
+                                    <div class="imgs">
+                                        <img src="/images/dealstoday/snack1.jpg"
+                                            class="img1" alt="Product Image">
+                                        <img
+                                            src="/images/dealstoday/snack2.avif"
+                                            class="img2" alt="Product Image">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">Product 1</h4>
+                                        <div class="prices">
+                                            <span class="price"><i
+                                                    class="fa-solid fa-indian-rupee-sign"></i>440</span>
+                                            <span class="discount">20%</span>
+                                        </div>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i
+                                                class="fa-solid fa-star-half-stroke"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <div class="btns">
+                                            <button
+                                                class="btn add-to-cart">Explore
+                                                now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product 4 -->
+                            <div class="product-card" data-aos="fade-up"
+                                data-aos-delay="400" data-aos="fade-up"
+                                data-id="1"
+                                data-name="Product 1" data-price="440"
+                                data-image="/images/product/topsell (1).jpg">
+                                <div class="product-box">
+                                    <div class="imgs">
+                                        <img
+                                            src="/images/dealstoday/Freshfind1.jpg"
+                                            class="img1" alt="Product Image">
+                                        <img
+                                            src="/images/dealstoday/Freshfind2.png"
+                                            class="img2" alt="Product Image">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">Product 1</h4>
+                                        <div class="prices">
+                                            <span class="price"><i
+                                                    class="fa-solid fa-indian-rupee-sign"></i>440</span>
+                                            <span class="discount">20%</span>
+                                        </div>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i
+                                                class="fa-solid fa-star-half-stroke"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <div class="btns">
+                                            <button class="btn add-to-cart">Add
+                                                to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Repeat the Product Card Template with new content -->
+                        </div>
+                    </section>
+
+                    <!-- Category Section -->
+                    <div class="category productactive" id>
+                        <div
+                            class="heading d-flex justify-content-between align-items-center">
+                            <h1 data-aos="fade-right"><span>Our</span>
+                                Category</h1>
+                            <div class="cate-nav">
+                                <nav
+                                    class="navbar navbar-expand-lg transparent">
+                                    <ul class="navbar-nav" data-aos="fade-left">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i
+                                                    class="fa fa-apple-alt"></i>Fruits
+                                                & Vegetables</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i
+                                                    class="fa fa-cheese"></i>Dairy
+                                                Products</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link"><i
+                                                    class="fa fa-bread-slice"></i>
+                                                Bakery
+                                                & Snacks</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link"><i
+                                                    class="fa fa-spray-can"></i>Household
+                                                Essentials</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <div class="products" data-aos="zoom-in">
+                            <div class="item">
+                                <img src="/images/product/category (1).jpg"
+                                    alt="Bakery & Snacks">
+                                <p class="title">Bakery & Snacks</p>
+                            </div>
+                            <div class="item">
+                                <img src="/images/product/category (2).jpg"
+                                    alt="Fruits & Vegetables">
+                                <p class="title">Fruits & Vegetables</p>
+                            </div>
+                            <div class="item">
+                                <img src="/images/product/category (2).avif"
+                                    alt="Dairy Products">
+                                <p class="title">Dairy Products</p>
+                            </div>
+                            <div class="item">
+                                <img src="/images/product/category (1).avif"
+                                    alt="Household Essentials">
+                                <p class="title">Household Essentials</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature product -->
+                    <section class="products productactive" id>
+                        <div class="heading">
+                            <h1 data-aos="fade-right"><span>Feature</span>
+                                Products</h1>
+                            <a href="/src/products.html" class="viewbtn"
+                                data-aos="fade-left">View
+                                All</a>
+                        </div>
+                        <div class="products-grid">
+                            <!-- product 1 -->
+                            <div class="product-card" data-aos="fade-up"
+                                data-aos-delay="100" data-aos="fade-up"
+                                data-id="1"
+                                data-name="Product 1" data-price="440"
+                                data-image="/images/product/topsell (1).jpg">
+                                <div class="product-box">
+                                    <div class="imgs">
+                                        <img
+                                            src="/images/Feature/feature (1).png"
+                                            alt="Product Image">
+
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">Product 1</h4>
+                                        <div class="prices">
+                                            <span class="price"><i
+                                                    class="fa-solid fa-indian-rupee-sign"></i>440</span>
+                                            <span class="discount">20%</span>
+                                        </div>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i
+                                                class="fa-solid fa-star-half-stroke"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <div class="btns">
+                                            <button class="btn add-to-cart">Add
+                                                to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product 2 -->
+                            <div class="product-card" data-aos="fade-up"
+                                data-aos-delay="200" data-aos="fade-up"
+                                data-id="1"
+                                data-name="Product 1" data-price="440"
+                                data-image="/images/product/topsell (1).jpg">
+                                <div class="product-box">
+                                    <div class="imgs">
+                                        <img
+                                            src="/images/Feature/feature (2).png"
+                                            alt="Product Image">
+
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">Product 1</h4>
+                                        <div class="prices">
+                                            <span class="price"><i
+                                                    class="fa-solid fa-indian-rupee-sign"></i>440</span>
+                                            <span class="discount">20%</span>
+                                        </div>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i
+                                                class="fa-solid fa-star-half-stroke"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <div class="btns">
+                                            <button class="btn add-to-cart">Add
+                                                to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product 3 -->
+                            <div class="product-card" data-aos="fade-up"
+                                data-aos-delay="300" data-aos="fade-up"
+                                data-id="1"
+                                data-name="Product 1" data-price="440"
+                                data-image="/images/product/topsell (1).jpg">
+                                <div class="product-box">
+                                    <div class="imgs">
+                                        <img
+                                            src="/images/Feature/feature (3).png"
+                                            alt="Product Image">
+
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">Product 1</h4>
+                                        <div class="prices">
+                                            <span class="price"><i
+                                                    class="fa-solid fa-indian-rupee-sign"></i>440</span>
+                                            <span class="discount">20%</span>
+                                        </div>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i
+                                                class="fa-solid fa-star-half-stroke"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <div class="btns">
+                                            <button class="btn add-to-cart">Add
+                                                to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product 4 -->
+                            <div class="product-card" data-aos="fade-up"
+                                data-aos-delay="400" data-aos="fade-up"
+                                data-id="1"
+                                data-name="Product 1" data-price="440"
+                                data-image="/images/product/topsell (1).jpg">
+                                <div class="product-box">
+                                    <div class="imgs">
+                                        <img
+                                            src="/images/Feature/feature (4).png"
+                                            alt="Product Image">
+
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">Product 1</h4>
+                                        <div class="prices">
+                                            <span class="price"><i
+                                                    class="fa-solid fa-indian-rupee-sign"></i>440</span>
+                                            <span class="discount">20%</span>
+                                        </div>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i
+                                                class="fa-solid fa-star-half-stroke"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <div class="btns">
+                                            <button class="btn add-to-cart">Add
+                                                to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Repeat the Product Card Template with new content -->
+                        </div>
+                    </section>
+
+                    <!-- Hot Offers -->
+                    <div class="hot-offers productactive" data-aos="fade-up"
+                        id="hotoffers">
+                        <div class="heading" data-aos="fade-down">
+                            <h1><span>Hot</span> Offers</h1>
+                        </div>
+                        <div class="product">
+                            <div class="row">
+
+                                <div class="col" data-aos="fade-up">
+                                    <div class="imgs">
+                                        <img src="/images/product/off1.jpg" alt>
+                                    </div>
+                                    <div class="content">
+                                        <h2 class="offer-title">Deal 1</h2>
+                                        <p class="offer-description">Up to 50%
+                                            off on selected items!</p>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="imgs">
+                                        <img src="/images/product/off2.jpg" alt>
+                                    </div>
+                                    <div class="content">
+                                        <h2 class="offer-title">Deal 2</h2>
+                                        <p class="offer-description">Buy 1 Get 1
+                                            Free on all items!</p>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="imgs">
+                                        <img src="/images/product/off3.jpg" alt>
+                                    </div>
+                                    <div class="content">
+                                        <h2 class="offer-title">Deal 3</h2>
+                                        <p class="offer-description">Flat 30%
+                                            off on electronics!</p>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="imgs">
+                                        <img src="/images/product/off4.jpg" alt>
+                                    </div>
+                                    <div class="content">
+                                        <h2 class="offer-title">Deal 4</h2>
+                                        <p class="offer-description">Extra 20%
+                                            off on your first order!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- testimonials section  -->
+                    <section class="testimonials">
+                        <div class="container">
+                            <div class="heading">
+                                <h1><span data-aos="fade-right">What Our</span>
+                                    <span1 data-aos="fade-left">Customers
+                                        Say</span1>
+                                </h1>
+                            </div>
+                            <div class="row">
+                                <div class="col" data-aos="zoom-in-down"
+                                    data-aos-delay="100">
+                                    <img src="/images/testimonials1.jpg"
+                                        alt="Customer 1">
+                                    <p>"Excellent service and quality products. I love shopping here!"</p>
+                                    <div class="name">John Doe</div>
+                                    <div class="position">Satisfied
+                                        Customer</div>
+                                </div>
+                                <div class="col" data-aos="zoom-in-down"
+                                    data-aos-delay="200">
+                                    <img src="/images/testimonials2.jpg"
+                                        alt="Customer 2">
+                                    <p>"Fast delivery and great customer support. Highly recommend!"</p>
+                                    <div class="name">Jane Smith</div>
+                                    <div class="position">Happy Shopper</div>
+                                </div>
+                                <div class="col" data-aos="zoom-in-down"
+                                    data-aos-delay="300">
+                                    <img src="/images/testimonials3.jpg"
+                                        alt="Customer 3">
+                                    <p>"A wonderful shopping experience every time. The best grocery store online!"</p>
+                                    <div class="name">Alice Brown</div>
+                                    <div class="position">Regular Customer</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- subscription -->
+                    <section class="sub" id="contact">
+                        <div class="container" data-aos="fade-up">
+                            <div class="content">
+                                <h2><span>Subscribe to</span> Our
+                                    Newsletter</h2>
+                                <p>Stay updated with the latest offers,
+                                    products,
+                                    and news directly in your inbox.</p>
+                                <form action="https://formspree.io/f/xnnjjjwn"
+                                    method="POST">
+                                    <div class="msg">
+                                        <input type="text" name="username"
+                                            placeholder="username" required
+                                            autocomplete="off">
+                                        <input type="email"
+                                            placeholder="Enter your email"
+                                            required autocomplete="off">
+                                    </div>
+                                    <textarea name="textarea" min="10"
+                                        placeholder="Write Message Here..."
+                                        required
+                                        autocomplete="off"></textarea><br>
+                                    <button type="submit">Submit</button>
+                                </form>
+                            </div>
+
+                            <div class="imgs">
+                                <img src="/images/product/sub (1).png"
+                                    alt="Related Promo">
+                            </div>
+                        </div>
+
+                    </section>
+
+                </div>
+            </section>
+
+            <!-- shoping card section modal -->
+            <div class="addtocard">
+                <section class="h-100 h-custom">
+                    <div class="container py-5">
+                        <div
+                            class="row d-flex justify-content-center align-items-center h-100">
+                            <div class="col-12">
+                                <div
+                                    class="card card-registration card-registration-2">
+                                    <div class="card-body p-0">
+                                        <div class="row g-0 ">
+                                            <div class="col-lg-8">
+                                                <div
+                                                    class="addtonav d-flex justify-content-between align-items-center">
+                                                    <h1
+                                                        class="mb-0 text-black">Shopping
+                                                        Cart</h1>
+                                                    <h6 class="mb-0 text-muted"
+                                                        id="itemCount"
+                                                        data-default="0">0
+                                                        items</h6>
+                                                </div>
+                                                <div id="cartItems"
+                                                    class="px-5">
+                                                </div>
+                                                <hr>
+                                                <div class="pt-1">
+                                                    <h6 class="mb-0"><a
+                                                            href="#!"
+                                                            class="text-body backtoshop"><i
+                                                                class="fas fa-long-arrow-alt-left me-2 "></i>Back
+                                                            to shop</a></h6>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-lg-4 bg-grey">
+                                                <div class="p-5 pt-3">
+                                                    <h3
+                                                        class="mt-2 pt-1 sheading">Summary
+                                                        <div class="cardclose">
+                                                            <i
+                                                                class="fa-solid fa-xmark"></i>
+                                                        </div>
+                                                    </h3>
+                                                    <hr>
+
+                                                    <div
+                                                        class="d-flex justify-content-between mb-4">
+                                                        <h5>items
+                                                            <span
+                                                                id="summaryItemCount"
+                                                                data-default="0">0</span>
+                                                        </h5>
+                                                        <h5 id="subtotal"
+                                                            data-default="0.00">0</h5>
+                                                    </div>
+
+                                                    <h5
+                                                        class="text-uppercase mb-3">Shipping</h5>
+
+                                                    <div class="mb-4 pb-2">
+                                                        <select
+                                                            class="form-select"
+                                                            id="shippingSelect">
+                                                            <option
+                                                                value="50">Standard-Delivery-
+                                                                <i
+                                                                    class="fa-solid fa-indian-rupee-sign"></i>50.00
+                                                            </option>
+                                                            <option
+                                                                value="100">Two-Day
+                                                                Delivery-
+                                                                <i
+                                                                    class="fa-solid fa-indian-rupee-sign"></i>100.00
+                                                            </option>
+                                                            <option
+                                                                value="150">One-Day
+                                                                Delivery-
+                                                                <i
+                                                                    class="fa-solid fa-indian-rupee-sign"></i>150.00
+                                                            </option>
+                                                        </select>
+                                                    </div>
+
+                                                    <h5 class="mb-3">Give
+                                                        code</h5>
+
+                                                    <div>
+                                                        <div
+                                                            class="form-outline">
+                                                            <input type="text"
+                                                                id="promoCode"
+                                                                class="form-control form-control-lg" />
+
+                                                        </div>
+                                                    </div>
+
+                                                    <hr>
+
+                                                    <div
+                                                        class="d-flex justify-content-between mb-5">
+                                                        <h5
+                                                            class="text-uppercase">Total
+                                                            price</h5>
+                                                        <h5 id="totalPrice"
+                                                            data-default="50.00">0.00</h5>
+                                                    </div>
+
+                                                    <button type="button"
+                                                        class="btn btn-dark register btn-block btn-lg"
+                                                        data-mdb-ripple-color="dark"><a
+                                                            href="#">Register</a></button>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- log in or sing in form  -->
+            <div class="loginorsinginform" id="loginorsinginform">
+                <div class="form-container">
+                    <div class="formclose" id="formclose">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="container" id="formcontainer">
+                        <div class="form-container sign-up-container">
+                            <form>
+                                <h1>Create Account</h1>
+                                <div class="social-container">
+                                    <a href="#" class="social"><i
+                                            class="fab fa-facebook"></i></a>
+                                    <a href="#" class="social"><i
+                                            class="fab fa-google"></i></a>
+                                    <a href="#" class="social"><i
+                                            class="fab fa-linkedin"></i></a>
+                                </div>
+
+                                <span>or use your email for registration</span>
+                                <input type="text" name="name"
+                                    placeholder="Full Name" required
+                                    minlength="4"
+                                    autocomplete="off" />
+                                <input type="email" name="email"
+                                    placeholder="Email Address" required
+                                    autocomplete="off" />
+                                <input type="password" name="password"
+                                    placeholder="Password" required
+                                    minlength="6" />
+                                <button type="submit" id="singin">Sign
+                                    Up</button>
+                            </form>
+
+                        </div>
+                        <div class="form-container sign-in-container">
+                            <form>
+                                <h1>Log in</h1>
+                                <div class="social-container">
+                                    <a href="#" class="social"><i
+                                            class="fab fa-facebook"></i></a>
+                                    <a href="#" class="social"><i
+                                            class="fab fa-google"></i></a>
+                                    <a href="#" class="social"><i
+                                            class="fab fa-linkedin"></i></a>
+                                </div>
+
+                                <span>or use your account</span>
+                                <input type="email" name="email"
+                                    placeholder="Email Address" required
+                                    autocomplete="off" />
+                                <input type="password" name="password"
+                                    placeholder="Password" required
+                                    minlength="6"
+                                    autocomplete="off" />
+                                <a href="#">Forgot your password?</a>
+                                <button type="submit" id="login">Log in</button>
+                            </form>
+
+                        </div>
+                        <div class="overlay-container">
+                            <div class="overlay">
+                                <div class="overlay-panel overlay-left">
+                                    <h1>Welcome Back!</h1>
+                                    <p>To keep shopping with us, please log in
+                                        with
+                                        your
+                                        account</p>
+                                    <button class="ghost" id="signIn">Log
+                                        in</button>
+                                </div>
+                                <div class="overlay-panel overlay-right">
+                                    <h1>Hello, Shopper!</h1>
+                                    <p>Create your account to enjoy our amazing
+                                        grocery
+                                        deals</p>
+                                    <button class="ghost" id="signUp">Sign
+                                        Up</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+            <!-- popup 1 for successfully Ordered placed-->
+            <div class="popup1" id="popup1">
+                <div class="container">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p>Succesfully Order Placed</p>
+                </div>
+            </div>
+            <!-- popup 2 offers msg -->
+            <div class="popup2" id="popup2">
+                <p id="popupMessage">
+                    🔥 Best Sell Offer: <span class="highlight">Flat 50%
+                        Off!</span> 🔥
+                </p>
+            </div>
+            <!-- popup 3 -->
+            <div id="popup3" class="popup3">
+                <div class="container1">
+                    <p id="msg1">Welcome Back! Let's Get You Started</p>
+                    <p id="msg2">Account Successfully Created!</p>
+                    <button id="okbtn">OK</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer section  -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+                        <h5>Customer Service</h5>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Shipping & Returns</a></li>
+                            <li><a href="#">Store Policy</a></li>
+                            <li><a href="#">Payment Methods</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+                        <h5>Contact Us</h5>
+                        <ul>
+                            <li>123 Grocery St, City, State 12345</li>
+                            <li>Phone: (123) 456-7890</li>
+                            <li>Email: info@grocerystore.com</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 newsletter col-sm-6 mb-4 mb-md-0">
+                        <h5>Newsletter</h5>
+                        <p>Subscribe to our newsletter for weekly updates and
+                            deals!</p>
+                        <form class="newsletter-form">
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control"
+                                    placeholder="Enter your email"
+                                    aria-label="Enter your email"
+                                    aria-describedby="button-addon2">
+                                <button class="btn" type="button"
+                                    id="button-addon2">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <hr class="mt-4 bottomline">
+                <div class="bottomfooter row">
+                    <div class="col-md-12 text-center">
+                        <p class="mb-0">&copy; 2023 Grocery Store. All rights
+                            reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- jQuery code -->
+        <script src="js/script.js"></script>
+
+        <!-- Bootstrap Script link -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+        <!-- Scroll animation cdn or link -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+        AOS.init({
+            duration: 1100,
+            once: false,
+        });
+    </script>
+    </body>
+
+</html>
