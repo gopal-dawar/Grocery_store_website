@@ -108,6 +108,10 @@
         display: inline-block;
     }
 
+    .header .menubtn {
+        display: inline-block;
+    }
+
     .header .navbar {
         display: flex;
         align-items: center;
@@ -417,6 +421,10 @@
     }
 
     .header .menu {
+        display: inline-block;
+    }
+    
+    .header .menubtn {
         display: inline-block;
     }
 
@@ -729,6 +737,9 @@
         display: inline-block;
     }
 
+    .header .menubtn {
+        display: inline-block;
+    }
     .header .navbar {
         display: flex;
         align-items: center;
