@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grocery Store/About</title>
+
+        <!-- Bootstrap css link -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+
+        <!-- font awesome link -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Css file -->
+        <link rel="stylesheet" href="/css/style.css">
+
+        <link rel="stylesheet" href="css-section/style.css">
+
+        <!-- Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora&display=swap"
+            rel="stylesheet">
+
+        <!-- jQuery link -->
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+        <!-- Scroll animation cdn link -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Preloader -->
+        <div class="preloader" id="preloader">
+            <div class="loader">
+                <div class="spinner"></div>
+                <i class="fa-brands fa-pagelines"></i>
+            </div>
+        </div>
+        <!-- Header Section -->
+        <header class="header">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="/index.html">Grocery Store</a>
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <form class="d-flex mx-auto">
+                            <input class="form-control" type="search"
+                                placeholder="Search here..."
+                                aria-label="Search">
+                            <button class="btn btn-outline-success"
+                                type="submit"><i
+                                    class="fas fa-search"></i></button>
+                        </form>
+                        <ul class="navbar-nav topnav mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i
+                                        class="fas fa-phone"></i> Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="formopen"><i
+                                        class="fas fa-user"></i></a>
+                            </li>
+                            <li class="nav-item">
+
+                                <!-- Shopping Cart Icon -->
+                                <a class="nav-link" id="shoppingCartIcon">
+                                    <i
+                                        class="fas fa-shopping-cart"><span
+                                            class="count"
+                                            data-default="0">0</span></i>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <nav class="navbar navbar-expand-lg nav2">
+                    <div class="collapse navbar-collapse"
+                        id="secondaryNavContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active1" href="/index.html">
+                                    <i class="fa-solid fa-house"></i>
+                                    Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                    href="/index.html#topsell"><i
+                                        class="fa-solid fa-shop shopmargin"></i>Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/index.html#deals"><i
+                                        class="fas fa-tag"></i> Deal Today</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                    href="/index.html#hotoffers"><i
+                                        class="fas fa-fire"></i> Hot Offers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/src/products.html"><i
+                                        class="fas fa-utensils"></i> Fresh
+                                    Deals</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/src/about.html"><i
+                                        class="fa-solid fa-address-card"></i>About
+                                    Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i
+                                        class="fas fa-heart"></i> Wishlist</a>
+                            </li>
+                        </ul>
+                        <div class="help-center ms-auto">
+                            <a href="index.html#contact" class="nav-link"><i
+                                    class="fas fa-question-circle"></i> Help
+                                Center</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="sectionheading">
+            <div class="container">
+                <div class="heading"
+                    style="padding: 2rem;padding-left: 5rem;">About
+                    Grocery <br> Store</div>
+            </div>
+        </div>
+
+        <section id="about" class="about-section">
+
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card mb-4">
+                            <img src="../images/fresh.jpg"
+                                class="card-img-top" alt="Fresh Produce">
+                            <div class="card-body">
+                                <h5 class="card-title">Fresh Produce</h5>
+                                <p class="card-text">
+                                    At Grocery Store, we pride ourselves on
+                                    offering the freshest fruits and vegetables,
+                                    sourced daily from local farms to ensure top
+                                    quality and taste.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card mb-4">
+                            <img
+                                src="../images/Sustainable Practices.jpg"
+                                class="card-img-top"
+                                alt="Sustainable Practices">
+                            <div class="card-body">
+                                <h5 class="card-title">Sustainable
+                                    Practices</h5>
+                                <p class="card-text">
+                                    We are committed to sustainability,
+                                    partnering with local suppliers and adopting
+                                    eco-friendly practices to support a greener
+                                    future.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card mb-4">
+                            <img
+                                src="../images/Exceptional Service.jpg"
+                                class="card-img-top" alt="Exceptional Service">
+                            <div class="card-body">
+                                <h5 class="card-title">Exceptional Service</h5>
+                                <p class="card-text">
+                                    Our team is dedicated to providing you with
+                                    a seamless shopping experience, whether
+                                    in-store or online, with personalized
+                                    assistance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card mb-4">
+                            <img src="../images/Affordable Prices.jpg"
+                                class="card-img-top" alt="Affordable Prices">
+                            <div class="card-body">
+                                <h5 class="card-title">Affordable Prices</h5>
+                                <p class="card-text">
+                                    Enjoy unbeatable prices and regular
+                                    discounts on a wide variety of grocery
+                                    items, making quality accessible to
+                                    everyone.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer section  -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+                        <h5>Customer Service</h5>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Shipping & Returns</a></li>
+                            <li><a href="#">Store Policy</a></li>
+                            <li><a href="#">Payment Methods</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+                        <h5>Contact Us</h5>
+                        <ul>
+                            <li>123 Grocery St, City, State 12345</li>
+                            <li>Phone: (123) 456-7890</li>
+                            <li>Email: info@grocerystore.com</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 newsletter col-sm-6 mb-4 mb-md-0">
+                        <h5>Newsletter</h5>
+                        <p>Subscribe to our newsletter for weekly updates and
+                            deals!</p>
+                        <form class="newsletter-form">
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control"
+                                    placeholder="Enter your email"
+                                    aria-label="Enter your email"
+                                    aria-describedby="button-addon2">
+                                <button class="btn btn-success" type="button"
+                                    id="button-addon2">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <hr class="mt-4 bottomline">
+                <div class="bottomfooter row">
+                    <div class="col-md-12 text-center">
+                        <p class="mb-0">&copy; 2023 Grocery Store. All rights
+                            reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- jQuery code -->
+        <script src="/js/script.js"></script>
+
+        <!-- Bootstrap Script link -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <!-- Scroll animation cdn or link -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+                AOS.init({
+                    duration: 1000, 
+                    once: true,
+                });
+            </script>
+    </body>
+
+</html>
